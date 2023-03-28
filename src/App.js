@@ -23,22 +23,13 @@ class App extends Component {
       }
     }
 
-    this.resizeInput = this.resizeInput.bind(this);
-
-  }
-
-  resizeInput = e => {
-    const length = e.target.value.trim().length+1;
-    e.target.placeholder = '';
-    e.target.style.width = e.target.value.length > 0 ? length + "ch" : '200px';
-    
   }
 
   render() {
     return (
       <div className="App">
         <h1 className='title'>cv-application</h1>
-        <Header resizeInput={ this.resizeInput }/>
+        <Header />
       </div>
     )
   }

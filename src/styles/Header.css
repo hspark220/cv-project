@@ -1,8 +1,10 @@
 .header {
     display: grid;
-    grid-template: repeat(2, 2rem);
+    grid-template: repeat(2, 2rem) / repeat(2, 200px);
+    grid-template-areas:
+    "firstName lastName"
+    "currentTitle currentTitle";
     row-gap: 1rem;
-
     padding: 2rem;
 }
 .name input{
@@ -13,6 +15,7 @@
 }
 
 .currentTitle {
+    grid-area: currentTitle;
     width: 500px;
     border: none;
     outline: none;

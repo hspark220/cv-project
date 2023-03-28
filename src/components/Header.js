@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
+import NameInput from './Header/NameInput';
 import '../styles/Header.css'
 
 class Header extends Component {
     constructor(props) {
         super(props);
+
     }
 
+    resizeInput = e => {
+        const length = e.target.value.trim().length+1;
+        e.target.placeholder = '';
+        e.target.style.width = e.target.value.length > 0 ? length + "ch" : '200px';
+       
+        this.resizeInput = this.resizeInput.bind(this);
+      }
+
     render() {
-        const { resizeInput } = this.props;
-        
         return (
             <form className='header'>
-                <div className='name'>
-                    <input className="firstName" type="text" placeholder="First Name" onChange={ resizeInput }/>
-                    <input className="lastName" type="text" placeholder="Last Name" onChange={ resizeInput }/>
-                </div>                
+                <NameInput placeholder='First Name' resizeInput={ this.resizeInput }/>
+                <NameInput placeholder='Last Name' resizeInput={ this.resizeInput }/>               
                 <input className="currentTitle" type="text" placeholder="current title..."/>
             </form>
         );
