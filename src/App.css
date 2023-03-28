@@ -12,13 +12,13 @@
 }
 .name input{
     font-size: 2rem;
-    width: auto;
-    border: none;
-    outline: none;
+    width: 200px;
+    /* border: none;
+    outline: none; */
 }
 
 .currentTitle {
     width: 500px;
-    border: none;
-    outline: none;
+    /* border: none;
+    outline: none; */
 }

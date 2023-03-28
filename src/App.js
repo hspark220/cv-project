@@ -11,8 +11,10 @@ class App extends Component {
   }
 
   resizeInput = e => {
-    console.log(e.target.value.length);
-    e.target.style.width = (e.target.value.trim().length) + "ch";
+    console.log(e.keyDown);
+    let length = e.target.value.trim().length;
+    if (e.key == 'l') length-= 1;
+    e.target.style.width = length + "ch";
   }
 
   render() {
