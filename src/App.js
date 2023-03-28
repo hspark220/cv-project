@@ -6,6 +6,23 @@ class App extends Component {
   constructor (props) {
     super(props);
 
+    this.state = {
+      header: {
+        name: '',
+        currentTitle: '',
+      },
+      main: {
+        experience: {},
+        experiences: [],
+        education: {},
+        educations: [],
+        extra: {},
+      },
+      info: {
+
+      }
+    }
+
     this.resizeInput = this.resizeInput.bind(this);
 
   }
