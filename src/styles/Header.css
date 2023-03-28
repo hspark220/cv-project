@@ -1,0 +1,19 @@
+.header {
+    display: grid;
+    grid-template: repeat(2, 2rem);
+    row-gap: 1rem;
+
+    padding: 2rem;
+}
+.name input{
+    font-size: 2rem;
+    width: 200px;
+    border: none;
+    outline: none;
+}
+
+.currentTitle {
+    width: 500px;
+    border: none;
+    outline: none;
+}

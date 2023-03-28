@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import './App.css';
+import './styles/App.css';
 
 class App extends Component {
   constructor (props) {
@@ -28,10 +28,10 @@ class App extends Component {
   }
 
   resizeInput = e => {
-    console.log(e.keyDown);
-    let length = e.target.value.trim().length;
-    if (e.key == 'l') length-= 1;
-    e.target.style.width = length + "ch";
+    const length = e.target.value.trim().length+1;
+    e.target.placeholder = '';
+    e.target.style.width = e.target.value.length > 0 ? length + "ch" : '200px';
+    
   }
 
   render() {
