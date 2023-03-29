@@ -5,7 +5,7 @@
     "firstName lastName"
     "currentTitle currentTitle";
     row-gap: 1rem;
-    padding: 2rem;
+    
 }
 .name input{
     font-size: 2rem;
