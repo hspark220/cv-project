@@ -14,17 +14,20 @@ class Experiences extends Component {
         return (
             <div className='main'>
                 <textarea type="text" placeholder='summary' className='summary'/>
-                <div className='experiences'>
+                <form className='experiences' onSubmit={submitExperience}>
                     <h1>Experience</h1>
                     {experiences.map((experience) => {
-                        return <form className="experience" onSubmit={submitExperience}>
-                                    
-                                    <button type="submit" className="submit">Submit</button>
-                                </form>
+                        return <div key={experience.id}>
+                            <input className='date' type='date'/>
+                            <input className='company' type='text'/>
+                            <input className='role' type='text'/>
+                        </div>            
+                               
                     })}
-                    
-                    <button className="addExperience" onClick={addExperience}>Add</button>
-                </div>
+
+                    <button type="submit" className="submit">Submit</button>
+                    <input type="button" className="addExperience" onClick={addExperience} value="Add"/>
+                </form>
                 <div className='education'>
 
                 </div>

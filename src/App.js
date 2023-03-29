@@ -41,11 +41,25 @@ class App extends Component {
 
   submitExperience = e => {
     e.preventDefault();
+    let i = 0;
+    console.log(e);
+    
     this.setState({
-      main: {
-        experiences: this.state.experiences
-      }
+      experiences: this.state.experiences.map(experience => {
+        experience = {
+          date: e.target[i].value,
+          company: e.target[i+1].value,
+          role: e.target[i+2].value,
+          id: experience.id,
+        }
+        i+=3;
+        return experience;
+        
+      })
     })
+    
+    
+    
 }
 
   render() {
