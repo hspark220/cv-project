@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
 import './styles/App.css';
+import Header from './components/Header';
+import Main from './components/Main';
 
 class App extends Component {
   constructor (props) {
@@ -30,6 +31,7 @@ class App extends Component {
       <div className="App">
         <h1 className='title'>cv-application</h1>
         <Header />
+        <Main />
       </div>
     )
   }
