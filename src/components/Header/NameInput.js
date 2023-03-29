@@ -8,9 +8,9 @@ class NameInput extends Component {
     render() {
         const {placeholder, resizeInput} = this.props;
         return (
-            <div className='name'>
+            <>
                 <input className="lastName" type="text" placeholder={ placeholder } onChange={ resizeInput }/>
-            </div>
+            </>
         )
         
     }

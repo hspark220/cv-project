@@ -19,8 +19,10 @@ class Header extends Component {
     render() {
         return (
             <form className='header'>
-                <NameInput placeholder='First Name' resizeInput={ this.resizeInput }/>
-                <NameInput placeholder='Last Name' resizeInput={ this.resizeInput }/>               
+                <div className='name'>
+                    <NameInput placeholder='First Name' resizeInput={ this.resizeInput }/>
+                    <NameInput placeholder='Last Name' resizeInput={ this.resizeInput }/>       
+                </div>
                 <input className="currentTitle" type="text" placeholder="current title..."/>
             </form>
         );
