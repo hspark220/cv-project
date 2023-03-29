@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
-import Main from './components/Main';
+import Experiences from './components/Experiences';
+import uniqid from "uniqid";
 
 class App extends Component {
   constructor (props) {
@@ -12,42 +13,49 @@ class App extends Component {
         name: '',
         currentTitle: '',
       },
-      main: {
-        experience: {
-          date:'',
-          company:'',
-          role:[],
-        },
-        experiences: [],
-        education: {},
-        educations: [],
-        extra: {},
+      experience: {
+        date:'',
+        company:'',
+        role:[],
+        id: uniqid,
       },
+      experiences: [],
+      education: {},
+      educations: [],
+      extra: {},
       info: {}
     }
   }
 
   addExperience = e => {
     this.setState({
-      main: {
-        experiences: this.state.main.experiences.concat(this.state.main.experience),
-        experience: {
-          date: '',
-          company: '',
-          role: '',
-        },
-      }
+      experiences: this.state.experiences.concat(this.state.experience),
+      experience: {
+        date: '',
+        company: '',
+        role: '',
+        id: uniqid(),
+      },
     })
   }
 
+  submitExperience = e => {
+    e.preventDefault();
+    this.setState({
+      main: {
+        experiences: this.state.experiences
+      }
+    })
+}
+
   render() {
-    const {header,main,info} = this.state;
+    const {header,experiences,info} = this.state;
 
     return (
       <div className="App">
         <h1 className='title'>cv-application</h1>
         <Header />
-        <Main main={main} addExperience={this.addExperience}/>
+        <Experiences experiences={experiences} addExperience={this.addExperience} submitExperience={this.submitExperience}/>
       </div>
     )
   }

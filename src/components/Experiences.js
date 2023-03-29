@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import '../styles/Main.css';
-import Experience from './Main/Experience';
 
-class Main extends Component {
+class Experiences extends Component {
     constructor(props) {
         super(props);
     }
 
+    
+
     render () {
-        const { main, addExperience } = this.props;
+        const { experiences, addExperience, submitExperience } = this.props;
 
         return (
             <div className='main'>
                 <textarea type="text" placeholder='summary' className='summary'/>
                 <div className='experiences'>
                     <h1>Experience</h1>
-                    {main.experiences.map((experience) => {
-                        return <Experience experience={experience}/>
+                    {experiences.map((experience) => {
+                        return <form className="experience" onSubmit={submitExperience}>
+                                    
+                                    <button type="submit" className="submit">Submit</button>
+                                </form>
                     })}
                     
                     <button className="addExperience" onClick={addExperience}>Add</button>
@@ -29,4 +33,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default Experiences;
