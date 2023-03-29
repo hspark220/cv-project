@@ -1,9 +1,10 @@
 .header {
     display: grid;
-    grid-template: repeat(2, 2rem);
+    grid-template: repeat(2, 2rem) 200px;
     grid-template-areas:
-    "firstName lastName"
-    "currentTitle currentTitle";
+    "firstName"
+    "currentTitle"
+    "summary";
     row-gap: 1rem;
     
 }

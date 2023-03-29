@@ -1,0 +1,24 @@
+.experience {
+    display: grid;
+    grid-template: 2rem 2rem 1fr / 200px 1fr;
+    grid-template-areas:
+    "date title"
+    "date company"
+    "none role";
+}
+
+.date {
+    grid-area: date;
+}
+
+.title {
+    grid-area: title;
+}
+
+.company {
+    grid-area: company;
+}
+
+.role {
+    grid-area: role;
+}

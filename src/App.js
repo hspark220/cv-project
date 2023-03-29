@@ -14,8 +14,10 @@ class App extends Component {
         currentTitle: '',
       },
       experience: {
-        date:'',
+        startDate:'',
+        endDate:'',
         company:'',
+        title:'',
         role:[],
         id: uniqid,
       },
@@ -31,9 +33,11 @@ class App extends Component {
     this.setState({
       experiences: this.state.experiences.concat(this.state.experience),
       experience: {
-        date: '',
-        company: '',
-        role: '',
+        startDate:'',
+        endDate:'',
+        company:'',
+        title:'',
+        role:[],
         id: uniqid(),
       },
     })
@@ -42,24 +46,21 @@ class App extends Component {
   submitExperience = e => {
     e.preventDefault();
     let i = 0;
-    console.log(e);
-    
     this.setState({
       experiences: this.state.experiences.map(experience => {
         experience = {
-          date: e.target[i].value,
-          company: e.target[i+1].value,
-          role: e.target[i+2].value,
-          id: experience.id,
+          startDate: e.target[i].value,
+          endDate: e.target[i+1].value,
+          title: e.target[i+2].value,
+          company: e.target[i+3].value,
+          role: e.target[i+4].value,
+          id: uniqid(),
         }
-        i+=3;
+        i+=5;
         return experience;
         
       })
     })
-    
-    
-    
 }
 
   render() {

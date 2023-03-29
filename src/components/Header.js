@@ -24,6 +24,7 @@ class Header extends Component {
                     <NameInput placeholder='Last Name' resizeInput={ this.resizeInput }/>       
                 </div>
                 <input className="currentTitle" type="text" placeholder="current title..."/>
+                <textarea type="text" placeholder='summary' className='summary'/>
             </form>
         );
     }
