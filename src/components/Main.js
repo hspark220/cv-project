@@ -8,7 +8,7 @@ class Main extends Component {
     }
 
     render () {
-        const { main } = this.props;
+        const { main, addExperience } = this.props;
 
         return (
             <div className='main'>
@@ -19,7 +19,7 @@ class Main extends Component {
                         return <Experience experience={experience}/>
                     })}
                     
-                    <button className="Add">Add</button>
+                    <button className="addExperience" onClick={addExperience}>Add</button>
                 </div>
                 <div className='education'>
 

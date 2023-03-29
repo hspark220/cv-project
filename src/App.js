@@ -23,11 +23,21 @@ class App extends Component {
         educations: [],
         extra: {},
       },
-      info: {
-
-      }
+      info: {}
     }
+  }
 
+  addExperience = e => {
+    this.setState({
+      main: {
+        experiences: this.state.main.experiences.concat(this.state.main.experience),
+        experience: {
+          date: '',
+          company: '',
+          role: '',
+        },
+      }
+    })
   }
 
   render() {
@@ -37,7 +47,7 @@ class App extends Component {
       <div className="App">
         <h1 className='title'>cv-application</h1>
         <Header />
-        <Main main={main}/>
+        <Main main={main} addExperience={this.addExperience}/>
       </div>
     )
   }

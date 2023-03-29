@@ -10,7 +10,7 @@ class Company extends Component {
 
         return(
             <div className="company">
-
+                <h3>company</h3>
             </div>
         )
     }

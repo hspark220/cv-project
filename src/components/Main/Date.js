@@ -10,7 +10,7 @@ class Date extends Component {
 
         return (
             <div className="date">
-
+                <h3>date</h3>
             </div>
         )
     }
