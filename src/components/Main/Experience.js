@@ -9,12 +9,13 @@ class Experience extends Component {
     }
 
     render () {
+        const { experience } = this.props;
 
         return (
             <div className="experience">
-                <Date />
-                <Company />
-                <Role />
+                <Date date={experience.date}/>
+                <Company company={experience.company}/>
+                <Role role={experience.role}/>
                 <button type="submit" className="submit">Submit</button>
             </div>
         )

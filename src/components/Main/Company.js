@@ -6,6 +6,8 @@ class Company extends Component {
     }
 
     render () {
+        const { company } = this.props;
+
         return(
             <div className="company">
 

@@ -13,7 +13,11 @@ class App extends Component {
         currentTitle: '',
       },
       main: {
-        experience: {},
+        experience: {
+          date:'',
+          company:'',
+          role:[],
+        },
         experiences: [],
         education: {},
         educations: [],
@@ -27,11 +31,13 @@ class App extends Component {
   }
 
   render() {
+    const {header,main,info} = this.state;
+
     return (
       <div className="App">
         <h1 className='title'>cv-application</h1>
         <Header />
-        <Main />
+        <Main main={main}/>
       </div>
     )
   }

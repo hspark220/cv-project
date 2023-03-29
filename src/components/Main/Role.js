@@ -6,6 +6,7 @@ class Role extends Component {
     }
 
     render () {
+        const { role } = this.props;
 
         return(
             <div className="role">

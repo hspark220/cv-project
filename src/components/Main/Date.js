@@ -6,6 +6,7 @@ class Date extends Component {
     }
 
     render () {
+        const { date } = this.props;
 
         return (
             <div className="date">
