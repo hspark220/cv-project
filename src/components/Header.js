@@ -9,7 +9,7 @@ class Header extends Component {
     }
 
     resizeInput = e => {
-        const length = e.target.value.trim().length;
+        const length = e.target.value.trim().length+1;
         e.target.placeholder = '';
         e.target.style.width = e.target.value.length > 0 ? length + "ch" : '200px';
        

@@ -1,15 +1,29 @@
 .App {
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template: 100px 200px 1fr / 1fr 600px 300px 1fr;
+    grid-template-areas: 
+    "title title title title"
+    ". header header ."
+    ". main info .";
 }
 
 .title {
+    grid-area: title;
     display: flex;
     justify-content: center;
 }
 
-form {
-    width: 1000px;
+
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.info {
+    grid-area: info;
 }
