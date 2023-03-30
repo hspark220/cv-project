@@ -32,8 +32,13 @@ class App extends Component {
         id: uniqid,
       },
       educations: [],
-      skills: [],
-      info: {}
+      
+      info: {
+        address: '',
+        phone: '',
+        email: '',
+        skills: [],
+      }
     }
   }
 
@@ -103,6 +108,21 @@ submitEducation = e => {
   })
 }
 
+submitInfo = e => {
+  e.preventDefault();
+  console.log(e.target);
+  this.setState({
+    info: {
+      address: e.target[0].value,
+      phone: e.target[1].value,
+      email: e.target[2].value,
+      skills: this.state.info.skills.concat([e.target[3].value, e.target[4].value, e.target[5].value, e.target[6].value, e.target[7].value].map(skill => {
+          return skill;
+      })),
+    }
+  })
+}
+
   render() {
     const {header,experiences, educations,info} = this.state;
 
@@ -114,7 +134,7 @@ submitEducation = e => {
           <Experiences experiences={experiences} addExperience={this.addExperience} submitExperience={this.submitExperience}/>
           <Education educations={educations} addEducation={this.addEducation} submitEducation={this.submitEducation}/>
         </div>
-        <Info />
+        <Info info={this.info} submitInfo={this.submitInfo}/>
       </div>
     )
   }

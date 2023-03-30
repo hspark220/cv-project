@@ -6,15 +6,16 @@ class Info extends Component {
     }
 
     render () {
+        const { info, submitInfo} = this.props;
 
         return (
-            <form className="info">
+            <form className="info" onSubmit={submitInfo}>
                 <h2>Personal Info</h2>
-                <label for='address'>Address</label>
+                <label htmlFor='address'>Address</label>
                 <input type='text' name='address' />
-                <label for='phone'>Phone</label>
+                <label htmlFor='phone'>Phone</label>
                 <input type='tel' name='phone'/>
-                <label for='email'>Email</label>
+                <label htmlFor='email'>Email</label>
                 <input type='email' name='email'/>
 
                 <h2>Skills</h2>
@@ -25,7 +26,9 @@ class Info extends Component {
                     <li><input type='text' className="skill" placeholder="Skill 4"/></li>
                     <li><input type='text' className="skill" placeholder="Skill 5"/></li>
                 </ul>
+                <input className="submit" type="submit" value="Submit"/>
             </form>
+
         )
     }
 }
