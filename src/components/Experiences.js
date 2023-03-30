@@ -13,7 +13,7 @@ class Experiences extends Component {
 
         return (        
             <form className='experiences' onSubmit={submitExperience}>
-                <h1>Experience</h1>
+                <h2>Experience</h2>
                 {experiences.map((experience) => {
                     return <div className='experience' key={experience.id}>
                         <input className='startDate' type='date' defaultValue={experience.startDate}/>
@@ -25,7 +25,7 @@ class Experiences extends Component {
                             
                 })}
 
-                <button type="submit" className="submit">Submit</button>
+                <input type="submit" className="submit" value="Submit"/>
                 <input type="button" className="addExperience" onClick={addExperience} value="Add"/>
             </form>
         )
