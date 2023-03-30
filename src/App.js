@@ -3,6 +3,7 @@ import './styles/App.css';
 import Header from './components/Header';
 import Experiences from './components/Experiences';
 import Education from './components/Education';
+import Info from './components/Info';
 import uniqid from "uniqid";
 
 class App extends Component {
@@ -109,8 +110,11 @@ submitEducation = e => {
       <div className="App">
         <h1 className='title'>cv-application</h1>
         <Header />
-        <Experiences experiences={experiences} addExperience={this.addExperience} submitExperience={this.submitExperience}/>
-        <Education educations={educations} addEducation={this.addEducation} submitEducation={this.submitEducation}/>
+        <div className='main'>
+          <Experiences experiences={experiences} addExperience={this.addExperience} submitExperience={this.submitExperience}/>
+          <Education educations={educations} addEducation={this.addEducation} submitEducation={this.submitEducation}/>
+        </div>
+        <Info />
       </div>
     )
   }
