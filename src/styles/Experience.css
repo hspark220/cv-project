@@ -1,6 +1,6 @@
 .experience {
     display: grid;
-    grid-template: 2rem 2rem 1fr / 200px 1fr;
+    grid-template: 2rem 2rem 1fr / 100px 400px;
     grid-template-areas:
     "date title"
     "date company"

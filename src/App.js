@@ -31,7 +31,7 @@ class App extends Component {
         id: uniqid,
       },
       educations: [],
-      extra: {},
+      skills: [],
       info: {}
     }
   }

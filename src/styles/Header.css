@@ -21,3 +21,7 @@
     border: none;
     outline: none;
 }
+
+.summary {
+    width: 500px;
+}
