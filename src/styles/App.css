@@ -18,6 +18,7 @@
 
 .header {
     grid-area: header;
+    margin-bottom: -1px;
 }
 
 .main {
@@ -26,4 +27,14 @@
 
 .info {
     grid-area: info;
+    margin-left: -1px;
+}
+
+.header, .main, .info {
+    padding: 2rem;
+    border: solid 1px;
+}
+
+input, textarea {
+    border: none;
 }

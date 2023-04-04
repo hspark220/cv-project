@@ -27,8 +27,8 @@ class App extends Component {
       education: {
         startDate: '',
         endDate: '',
-        degree: '',
         university: '',
+        degree: '',
         id: uniqid,
       },
       educations: [],
@@ -69,6 +69,7 @@ class App extends Component {
           role: e.target[i+4].value,
           id: uniqid(),
         }
+        
         i+=5;
         return experience;
         
@@ -97,8 +98,8 @@ submitEducation = e => {
       education = {
         startDate: e.target[i].value,
         endDate: e.target[i+1].value,
-        degree: e.target[i+2].value,
-        university: e.target[i+3].value,
+        university: e.target[i+2].value,
+        degree: e.target[i+3].value,
         id: uniqid(),
       }
       i+=4;
@@ -110,7 +111,6 @@ submitEducation = e => {
 
 submitInfo = e => {
   e.preventDefault();
-  console.log(e.target);
   this.setState({
     info: {
       address: e.target[0].value,

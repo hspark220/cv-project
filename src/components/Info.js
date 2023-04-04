@@ -12,12 +12,19 @@ class Info extends Component {
         return (
             <form className="info" onSubmit={submitInfo}>
                 <h2>Personal Info</h2>
-                <label htmlFor='address'>Address</label>
-                <input type='text' name='address' />
-                <label htmlFor='phone'>Phone</label>
-                <input type='tel' name='phone'/>
-                <label htmlFor='email'>Email</label>
-                <input type='email' name='email'/>
+                <div className="address">
+                    <label htmlFor='address'>Address:</label>
+                    <input type='text' name='address' />
+                </div>
+                <div className="phone">
+                    <label htmlFor='phone'>Phone:</label>
+                    <input type='tel' name='phone'/>
+                </div>
+                <div className="email">
+                    <label htmlFor='email'>Email:</label>
+                    <input type='email' name='email'/>
+                </div>
+                
 
                 <h2>Skills</h2>
                 <ul>

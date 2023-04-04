@@ -17,8 +17,8 @@ class Education extends Component {
                     return <div className='education' key={education.id}>
                         <input className='startDate' type='date' defaultValue={education.startDate}/>
                         <input className='endDate' type='date' defaultValue={education.endDate}/>
-                        <input className='degree' type='text' defaultValue={education.degree}/>
-                        <input className='university' type='text' defaultValue={education.university}/>
+                        <input className='university' type='text' defaultValue={education.university} placeholder="university"/>
+                        <input className='degree' type='text' defaultValue={education.degree} placeholder="degree"/>
                     </div>
                 })}
 

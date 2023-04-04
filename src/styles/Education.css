@@ -3,7 +3,8 @@
     grid-template: 2rem 2rem / 100px 400px;
     grid-template-areas:
     "startDate university"
-    "endDate degree"
+    "endDate degree";
+    column-gap: 1rem;
 }
 
 .education .startDate {
