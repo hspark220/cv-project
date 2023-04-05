@@ -14,6 +14,7 @@ class App extends Component {
       header: {
         name: '',
         currentTitle: '',
+        summary: '',
       },
       experience: {
         startDate:'',
@@ -40,6 +41,18 @@ class App extends Component {
         skills: [],
       }
     }
+  }
+
+  submitHeader = e => {
+    e.preventDefault();
+    console.log(e);
+    this.setState({
+      header: {
+        name: e.target[0].value + ' ' +  e.target[1].value,
+        currentTitle: e.target[2].value,
+        summary: e.target[3].value,
+      } 
+    })
   }
 
   addExperience = e => {
@@ -116,9 +129,7 @@ submitInfo = e => {
       address: e.target[0].value,
       phone: e.target[1].value,
       email: e.target[2].value,
-      skills: this.state.info.skills.concat([e.target[3].value, e.target[4].value, e.target[5].value, e.target[6].value, e.target[7].value].map(skill => {
-          return skill;
-      })),
+      skills: [e.target[3].value, e.target[4].value, e.target[5].value, e.target[6].value, e.target[7].value],
     }
   })
 }
@@ -129,12 +140,12 @@ submitInfo = e => {
     return (
       <div className="App">
         <h1 className='title'>cv-application</h1>
-        <Header />
+        <Header submitHeader={this.submitHeader}/>
         <div className='main'>
           <Experiences experiences={experiences} addExperience={this.addExperience} submitExperience={this.submitExperience}/>
           <Education educations={educations} addEducation={this.addEducation} submitEducation={this.submitEducation}/>
         </div>
-        <Info info={this.info} submitInfo={this.submitInfo}/>
+        <Info info={info} submitInfo={this.submitInfo}/>
       </div>
     )
   }

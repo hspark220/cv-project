@@ -1,11 +1,13 @@
 .header {
     display: grid;
-    grid-template: repeat(2, 2rem) 200px;
+    grid-template: repeat(2, 2rem) 200px 50px;
     grid-template-areas:
     "firstName"
     "currentTitle"
-    "summary";
-    row-gap: 1rem;
+    "summary"
+    "submit";
+    row-gap: 0.5rem;
+    padding-bottom: 16px;
     
 }
 .name input{
@@ -24,4 +26,10 @@
 
 .summary {
     width: 500px;
+    grid-area: summary;
+}
+
+.headerSubmit {
+    grid-area: submit;
+    width: 53px;
 }
